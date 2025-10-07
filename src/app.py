@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash
+from flask import Flask, render_template, url_for, redirect, request
 from forms import FormLogin
 
 app = Flask(__name__)
@@ -12,8 +12,8 @@ def index():
     if form.validate_on_submit():
         return redirect(url_for('index'))
         
-
-    return render_template('index.html', form = form)
+    was_submitted = request.method == 'POST' 
+    return render_template('index.html', form = form, was_submitted=was_submitted)
 
 
 if __name__ == "__main__":

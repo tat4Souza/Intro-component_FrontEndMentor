@@ -7,4 +7,4 @@ class FormLogin(FlaskForm):
     last_name = StringField("Last Name:", validators=[DataRequired("Last Name cannot be empty")])
     email = StringField("Email Address:", validators=[DataRequired("Email cannot be empty"), Email("Looks like this is not an email")])
     password = PasswordField("Password:", validators=[DataRequired("Password cannot be empty")])
-    btn_submit = SubmitField("Fazer Claim your free trial")
+    btn_submit = SubmitField("Claim your free trial")

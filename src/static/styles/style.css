@@ -1,13 +1,32 @@
+:root {
+    --bs-primary: red;
+    --bs-primary-rgb: 255, 122, 122;
+
+    --red-400: hsl(0, 100%, 74%);
+    --red-rgb: 255, 122, 122;
+    --green-400: rgb(56, 204, 140);
+    --green-500: hsl(154, 59%, 45%);
+
+    --purple-350: hsl(246, 25%, 77%);
+    --purple-700: hsl(248, 32%, 49%);
+
+    --gray-900: hsl(249, 10%, 26%);
+}
+
 body {
     min-height: 100vh;
     max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-image: url(../images/bg-intro-desktop.png);
+    background-color: var(--red-400) !important;
 }
 
 .content {
     width: 75%;
+ 
 }
 
 .section-title {
@@ -17,3 +36,36 @@ body {
 .section-form {
     width: 50%;
 }
+
+.form-container {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px;
+}
+
+.btn-trial {
+    background-color: var(--purple-700) !important;
+    border-color: var(--purple-700) !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 8px;
+}
+
+.btn-submit {
+    background-color: var(--green-400) !important;
+    border-color: var(--green-500) !important;
+    border-bottom: 5px solid var(--green-500) !important;
+    transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.7;
+}
+
+.text-gray {
+    color: var(--purple-350);
+}
+
+.form-control:focus {
+    border-color: var(--red-400) !important; 
+    box-shadow: 0 0 0 0.25rem rgba(var(--red-rgb), 0.4) !important;
+}
+
+.invalid {
+    border-color: var(--red-400) !important;}
