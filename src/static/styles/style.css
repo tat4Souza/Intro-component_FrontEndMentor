@@ -1,0 +1,19 @@
+body {
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 75%;
+}
+
+.section-title {
+    width: 50%;
+}
+
+.section-form {
+    width: 50%;
+}
